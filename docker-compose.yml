@@ -5,7 +5,6 @@ services:
     restart: always
     ports:
       - 8080:80
-      - 442:443
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: exampleuser
