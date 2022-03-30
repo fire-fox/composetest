@@ -12,6 +12,8 @@ services:
       WORDPRESS_DB_NAME: exampledb
     volumes:
       - wordpress:/var/www/html
+    networks:
+      - test_network
 
   db:
     image: mysql:5.7
@@ -27,3 +29,7 @@ services:
 volumes:
   wordpress:
   db:
+
+networks:
+    test_network:
+        external: true
