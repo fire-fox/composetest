@@ -5,9 +5,10 @@ services:
   wordpress:
     container_name: wp1  
     image: wordpress:latest
-    labels:
-      io.portainer.accesscontrol.public
     restart: "always"
+    environment:
+      - VIRTUAL_HOST=test.miperu.com
+      - VIRTUAL_PORT=9000
     ports:
       - "8001:80"
     volumes:
@@ -21,8 +22,6 @@ services:
   db:
     container_name: mysql1  
     image: mysql:latest
-    labels:
-      io.portainer.accesscontrol.public
     command: --default-authentication-plugin=mysql_native_password  
     restart: "always"
     volumes:
