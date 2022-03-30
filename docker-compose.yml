@@ -5,7 +5,7 @@ services:
     ports:
       - "8000:5000"
     volumes:
-      - .:/code
+      - composetest_data:/code
     environment:
       FLASK_ENV: development
   redis:
