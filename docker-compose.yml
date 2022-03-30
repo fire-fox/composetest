@@ -9,3 +9,7 @@ services:
       - VIRTUAL_PORT=9000
     networks:
       - test_network
+      
+networks:
+    test_network:
+        external: true
