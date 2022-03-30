@@ -8,4 +8,4 @@ services:
       - LETSENCRYPT_HOST=app1.mysite.com
       - VIRTUAL_PORT=9000
     networks:
-      - bridge
+      - test_network
