@@ -4,8 +4,7 @@ services:
   app1:
     image: php:7.4-apache
     environment:
-      - VIRTUAL_HOST=app1.mysite.cocm
-      - LETSENCRYPT_HOST=app1.mysite.com
+      - VIRTUAL_HOST=demo.miperu.org
       - VIRTUAL_PORT=9000
     networks:
       - test_network
